@@ -38,6 +38,7 @@ console.log(`The odd numbers you gave are ${getOdds(numbers)}.`);
  */
 function getLength(numbers) {
   console.log(numbers.length)
+  return numbers.length
 }
 
 /**
@@ -50,6 +51,7 @@ function getSum(numbers) {
     sum += start
   }
   console.log(sum)
+  return sum
 }
 
 /**
@@ -61,6 +63,7 @@ function getMean(numbers) {
   for (let i = 0; i<=5; i++)
   sum += i
 console.log(sum / numbers.length)
+return sum / numbers.length
   }
 
 /**
@@ -68,11 +71,14 @@ console.log(sum / numbers.length)
  * @returns {number} the smallest of the numbers
  */
 function getMin(numbers) {
-  let i = 0
-  for (let i = 0; i<=5; i++){
-    if (i<=1)
-    console.log(i)
+  let min = numbers[0]
+  for (let i = 0; i < numbers.length; i++){
+    numbers[i]
+    if(numbers[i] < min){
+      min = numbers[i]
+    }
   }
+  return min
 }
 
 /**
@@ -80,11 +86,14 @@ function getMin(numbers) {
  * @returns {number} the largest of the numbers
  */
 function getMax(numbers) {
-  let i = 0
-  for (let i = 0; i<=5; i++){
-    if (i>=5)
-    console.log(i)
+let max = numbers[0]
+for ( let i = 0; i < numbers.length; i++){
+  numbers[i]
+  if(numbers[i] > max){
+    max = numbers[i]
   }
+}
+return max
 }
 
 /**
